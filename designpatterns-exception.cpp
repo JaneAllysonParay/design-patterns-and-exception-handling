@@ -69,6 +69,7 @@ int getValidInt(const string &prompt, int min, int max)
             cout << "Error: " << e.what() << endl;
         }
     }
+    return 0;
 }
 
 // Interface class (pure virtual)
@@ -200,7 +201,7 @@ string getValidAns(const string &prompt, bool (*isValid)(const string &))
         }
         return input;
     }
-    return ""; // This line will never be reached but necessary for the compiler
+    return 0;
 }
 
 // Get a valid product ID
@@ -235,7 +236,7 @@ string getValidID(const string &prompt, bool (*isValid)(const string &))
             cout << "Error: " << e.what() << endl;
         }
     }
-    return ""; // This return is unreachable but necessary for the compiler
+    return 0;
 }
 
 // View Orders class
