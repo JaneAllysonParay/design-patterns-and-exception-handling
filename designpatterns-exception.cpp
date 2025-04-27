@@ -38,7 +38,8 @@ int getValidInt(const string &prompt, int min, int max)
 {
     string input;
     int value;
-    while (true)
+    bool valid = false;
+    while (!valid)
     {
         cout << prompt;
         getline(cin, input);
